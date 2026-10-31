@@ -29,7 +29,9 @@ export default function CalculatorPage({ onNavigate }) {
       <PhotoBackdrop />
 
       <div className="relative flex w-full max-w-xl flex-col items-center">
-        <h1 className="font-serif text-4xl font-medium tracking-wide sm:text-5xl">Your Investment</h1>
+        <h1 className="text-center font-serif text-4xl font-medium tracking-wide sm:text-5xl">
+          Your Airbnb Investment
+        </h1>
 
         <GlassCard className="mt-8 w-full space-y-9 p-6 sm:mt-10 sm:p-11">
           <div className="grid gap-9 sm:grid-cols-2 sm:gap-8">
