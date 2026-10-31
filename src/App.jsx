@@ -2,12 +2,14 @@ import { useState } from 'react'
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion'
 import LandingPage from './pages/LandingPage.jsx'
 import CalculatorPage from './pages/CalculatorPage.jsx'
+import PrimeLocationPage from './pages/PrimeLocationPage.jsx'
 import ProfitSharingPage from './pages/ProfitSharingPage.jsx'
 
 const PAGES = {
   landing: LandingPage,
   calculator: CalculatorPage,
   profitSharing: ProfitSharingPage,
+  primeLocation: PrimeLocationPage,
 }
 
 export default function App() {

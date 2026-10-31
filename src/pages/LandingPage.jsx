@@ -71,12 +71,14 @@ export default function LandingPage({ onNavigate }) {
         </div>
 
         <motion.div
+          className="flex flex-col items-center gap-3 sm:flex-row sm:gap-4"
           initial="hidden"
           animate={state}
           variants={{ hidden: { opacity: 0, y: 16 }, shown: { opacity: 1, y: 0 } }}
           transition={{ duration: 0.9, delay: 1.9, ease: 'easeOut' }}
         >
           <GlassButton onClick={() => onNavigate('calculator')}>Start Your Investment</GlassButton>
+          <GlassButton onClick={() => onNavigate('primeLocation')}>Prime Location</GlassButton>
         </motion.div>
       </div>
     </main>
