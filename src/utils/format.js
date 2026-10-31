@@ -10,4 +10,4 @@ export const formatRM = (value) => {
   return `${value < 0 ? '− ' : ''}RM ${digits}`
 }
 
-export const formatPercent = (value) => `${value < 0 ? '− ' : ''}${centsFormat.format(Math.abs(value))}%`
+export const formatPercent = (value) => `${centsFormat.format(value)}%`

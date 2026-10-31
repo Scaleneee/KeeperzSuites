@@ -17,10 +17,11 @@ export function CalculatorProvider({ children }) {
     const grossRevenue = nightlyRental * occupancyDays
     const ownerShare = (grossRevenue * OWNER_PERCENT) / 100
     const utilities = (grossRevenue * UTILITY_PERCENT) / 100
-    const netRentalIncome = ownerShare - utilities - MAINTENANCE_FEE
+    const incomeAfterUtilities = ownerShare - utilities
     // Left null until the inputs exist, so a blank field never reads as RM 0.
-    const monthlyCashflow = monthlyInstallment === null ? null : netRentalIncome - monthlyInstallment
-    const annualRoi = purchasePrice ? ((netRentalIncome * 12) / purchasePrice) * 100 : null
+    const monthlyCashflow =
+      monthlyInstallment === null ? null : incomeAfterUtilities - MAINTENANCE_FEE - monthlyInstallment
+    const annualRoi = purchasePrice ? ((incomeAfterUtilities * 12) / purchasePrice) * 100 : null
 
     return {
       monthlyInstallment,

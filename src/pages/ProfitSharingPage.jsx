@@ -116,13 +116,11 @@ export default function ProfitSharingPage({ onNavigate }) {
               <>
                 <p className="mt-3 text-sm font-medium tabular-nums">
                   <span className="inline-block">
-                    ({formatRM(ownerShare)} − {formatRM(utilities)} − {formatRM(maintenanceFee)}) × 12
+                    ({formatRM(ownerShare)} − {formatRM(utilities)}) × 12
                   </span>{' '}
                   <span className="inline-block">÷ {formatRM(purchasePrice)} × 100%</span>
                 </p>
-                <p
-                  className={`mt-3 text-4xl font-light tracking-tight tabular-nums ${annualRoi < 0 ? 'text-[#f6c1b2]' : 'text-gold-light'}`}
-                >
+                <p className="mt-3 text-4xl font-light tracking-tight text-gold-light tabular-nums">
                   = {formatPercent(annualRoi)}
                   <span className="ml-2 text-sm tracking-normal text-white/85">per year</span>
                 </p>
