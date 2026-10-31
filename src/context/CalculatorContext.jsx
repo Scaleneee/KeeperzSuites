@@ -5,7 +5,7 @@ const CalculatorContext = createContext(null)
 const OPERATOR_PERCENT = 20
 const OWNER_PERCENT = 80
 const UTILITY_PERCENT = 15
-const MAINTENANCE_FEE = 550
+const MAINTENANCE_FEE = 455
 
 export function CalculatorProvider({ children }) {
   const [monthlyInstallment, setMonthlyInstallment] = useState(null)

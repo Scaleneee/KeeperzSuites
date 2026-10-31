@@ -87,7 +87,7 @@ export default function ProfitSharingPage({ onNavigate }) {
                 <dl>
                   <div className="space-y-2.5">
                     <Deduction label="Utilities (15%)" value={formatRM(-utilities)} />
-                    <Deduction label="Maintenance Fees" value={formatRM(-maintenanceFee)} />
+                    <Deduction label="Maintenance Fees (Fixed)"value={formatRM(-maintenanceFee)} />
                     <Deduction
                       label="Monthly Installment"
                       value={monthlyInstallment === null ? NOT_ENTERED : formatRM(-monthlyInstallment)}
