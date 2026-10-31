@@ -26,9 +26,9 @@ function Mark({ correct }) {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.8 }}
       transition={{ duration: 0.35, ease: 'easeOut' }}
-      className={`absolute -top-4 left-1/2 z-10 -ml-[1.125rem] flex h-9 w-9 items-center justify-center rounded-full border-2 border-white shadow-lg ${correct ? 'bg-[#22a35a]' : 'bg-[#dc2f3c]'}`}
+      className={`absolute -top-3.5 left-1/2 z-10 -ml-3.5 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white shadow-lg ${correct ? 'bg-[#22a35a]' : 'bg-[#dc2f3c]'}`}
     >
-      <svg aria-hidden="true" viewBox="0 0 16 16" className="h-4 w-4" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg aria-hidden="true" viewBox="0 0 16 16" className="h-3.5 w-3.5" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
         {correct ? <path d="M3 8.5 6.5 12 13 4.5" /> : <path d="M3.5 3.5l9 9M12.5 3.5l-9 9" />}
       </svg>
       <span className="sr-only">{correct ? 'Correct' : 'Incorrect'}</span>
@@ -48,15 +48,15 @@ export default function PrimeLocationPage({ onNavigate }) {
   })
 
   return (
-    <main className="relative flex min-h-dvh flex-col items-center px-4 py-10 sm:py-12">
+    <main className="relative flex min-h-dvh flex-col items-center justify-center px-4 py-6">
       <PhotoBackdrop />
 
-      <div className="relative w-full max-w-2xl">
-        <h1 className="text-center font-serif text-3xl leading-tight font-medium tracking-wide sm:text-4xl">
+      <div className="relative w-full max-w-xl">
+        <h1 className="text-center font-serif text-2xl leading-tight font-medium tracking-wide sm:text-3xl">
           ✨ WHAT MAKES THE LIGHT CITY A PRIME LOCATION?
         </h1>
 
-        <div className="mt-8 grid grid-cols-2 gap-x-3 gap-y-5 sm:gap-x-5">
+        <div className="mt-5 grid grid-cols-2 gap-3 sm:gap-4">
           {CHOICES.map(({ label, image, position = 'object-center' }) => (
             <motion.button
               key={label}
@@ -67,22 +67,22 @@ export default function PrimeLocationPage({ onNavigate }) {
               <img
                 src={image}
                 alt=""
-                className={`aspect-[16/10] w-full rounded-t-[23px] object-cover ${position}`}
+                className={`aspect-[2/1] w-full rounded-t-[23px] object-cover ${position}`}
               />
-              <span className="block px-2 py-3 text-center text-sm font-medium sm:text-base">{label}</span>
+              <span className="block px-2 py-2 text-center font-serif text-base font-medium tracking-wide sm:text-lg">{label}</span>
             </motion.button>
           ))}
         </div>
 
         <motion.button
           {...tileProps(CORRECT_CHOICE)}
-          className={`${TILE} mt-5 px-4 py-6 text-center text-sm font-medium sm:text-base ${selected === CORRECT_CHOICE ? 'border-[#22a35a]!' : ''}`}
+          className={`${TILE} mt-3 px-4 py-4 text-center font-serif text-base font-medium tracking-wide sm:mt-4 sm:text-lg ${selected === CORRECT_CHOICE ? 'border-[#22a35a]!' : ''}`}
         >
           <AnimatePresence>{selected === CORRECT_CHOICE && <Mark correct />}</AnimatePresence>
           {CORRECT_CHOICE}
         </motion.button>
 
-        <div className="mt-8 flex justify-center">
+        <div className="mt-5 flex justify-center">
           <GlassButton onClick={() => onNavigate('landing')}>Back</GlassButton>
         </div>
       </div>
