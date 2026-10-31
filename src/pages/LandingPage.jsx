@@ -66,7 +66,7 @@ export default function LandingPage({ onNavigate }) {
             variants={{ hidden: { opacity: 0 }, shown: { opacity: 1 } }}
             transition={{ duration: 0.9, delay: 1.5, ease: 'easeOut' }}
           >
-            Airbnb Investment Property Calculator
+            Airbnb Investment Property
           </motion.p>
         </div>
 
