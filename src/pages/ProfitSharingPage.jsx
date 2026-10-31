@@ -111,7 +111,7 @@ export default function ProfitSharingPage({ onNavigate }) {
           <GlassCard className="p-6 text-center">
             <h2 className="label-caps">Return on Investment (ROI)</h2>
             {annualRoi === null ? (
-              <p className="mt-3 text-sm">Enter your Property Purchase Price on the previous page to see your ROI.</p>
+              <p className="mt-3 text-sm font-medium text-[#ff6b6b]">Enter your Property Purchase Price on the previous page to see your ROI.</p>
             ) : (
               <>
                 <p className="mt-3 text-sm font-medium tabular-nums">
